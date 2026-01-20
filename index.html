@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio · CMG</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary-size-modul: 80px;
+  --secondary-size-modul: calc(var(--primary-size-modul) / 2);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* ================= IZQUIERDA ================= */
+#uno{
+  width: 50%;
+  background-color: #ff00ff;
+  display: flex;
+  flex-direction: column;
+}
+
+header{ padding: 20px; }
+
+h1{
+  color: #3a00ff;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+main{
+  display: flex;
+  padding: 20px;
+}
+
+main section{ width: 50%; }
+
+a{
+  display: block;
+  color: #3a00ff;
+  text-decoration: none;
+  font-size: 2.4em;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+
+/* ================= DERECHA ================= */
+#dos{
+  width: 50%;
+  background-color: white;
+}
+
+#system{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.top, .bottom, .left, .right{
+  background-color: #3a00ff;
+}
+
+/* ---------- MODULO BOCA ---------- */
+#modA{
+  position: absolute;
+  bottom: var(--secondary-size-modul);            
+  left: var(--primary-size-modul);
+  width: calc(100% - (var(--primary-size-modul) * 2));
+  height: calc(var(--primary-size-modul) * 4);
+  background-color: #ff00ff;
+}
+
+
+#modA .top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--secondary-size-modul);
+}
+#modA .bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--secondary-size-modul);
+}
+#modA .left{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--secondary-size-modul);
+}
+#modA .right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--secondary-size-modul);
+}
+
+/* ---------- MODULO OJOS  ---------- */
+#modC{
+  position: absolute;
+  top: var(--secondary-size-modul);             
+  left: var(--primary-size-modul);
+  width: calc(100% - (var(--primary-size-modul) * 2));
+  height: calc(var(--primary-size-modul) * 3);
+  background-color: #ff00ff;
+  display: flex;
+  gap: var(--secondary-size-modul);
+  padding: var(--secondary-size-modul);
+}
+
+.window{
+  position: relative;
+  flex-grow: 1;
+  background-color: white;
+}
+
+/* marcos pequeños */
+.window .top,
+.window .bottom{
+  position: absolute;
+  left: var(--secondary-size-modul);
+  right: var(--secondary-size-modul);
+  height: var(--secondary-size-modul);
+}
+.window .top{ top: 0; }
+.window .bottom{ bottom: 0; }
+
+.window .left,
+.window .right{
+  position: absolute;
+  top: var(--secondary-size-modul);
+  bottom: var(--secondary-size-modul);
+  width: var(--secondary-size-modul);
+}
+.window .left{ left: 0; }
+.window .right{ right: 0; }
+
+/* OJOS */
+.circle{
+  position: absolute;
+  width: var(--primary-size-modul);
+  height: var(--primary-size-modul);
+  background-color: #3a00ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px){
+  :root{ --primary-size-modul: 60px; }
+
+  .container{
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  #uno, #dos{
+    width: 100%;
+    height: 100vh;
+  }
+
+  h1{ font-size: 2em; }
+  a{ font-size: 2em; }
+
+  #modA, #modC{
+    left: var(--secondary-size-modul);
+    width: calc(100% - (var(--secondary-size-modul) * 2));
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div id="uno">
+    <header>
+      <h1>PORTFOLIO – CMG</h1>
+    </header>
+
+    <main>
+      <section>
+        <a href="https://carmenmartinezgil.github.io/P1/" target="_blank" rel="noopener">P1</a>
+        <a href="https://carmenmartinezgil.github.io/p2/" target="_blank" rel="noopener">P2</a>
+        <a href="https://carmenmartinezgil.github.io/p3/" target="_blank" rel="noopener">P3</a>
+        <a href="https://carmenmartinezgil.github.io/p4/" target="_blank" rel="noopener">P4</a>
+        <a href="https://carmenmartinezgil.github.io/p5/" target="_blank" rel="noopener">P5</a>
+      </section>
+
+      <section>
+        <a href="https://carmenmartinezgil.github.io/p6/" target="_blank" rel="noopener">P6</a>
+        <a href="https://carmenmartinezgil.github.io/p7/" target="_blank" rel="noopener">P7</a>
+        <a href="https://carmenmartinezgil.github.io/p8/" target="_blank" rel="noopener">P8</a>
+        <a href="https://carmenmartinezgil.github.io/p9/" target="_blank" rel="noopener">P9.1</a>
+        <a href="https://github.com/carmenmartinezgil/p9/blob/main/carmen_portada_calendari.pdf" target="_blank" rel="noopener">P9.2</a>
+      </section>
+    </main>
+  </div>
+
+  <div id="dos">
+    <div id="system">
+
+      <!-- OJOS  -->
+      <div id="modC">
+        <div class="window">
+          <div class="top"></div>
+          <div class="right"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="circle"></div>
+        </div>
+
+        <div class="window">
+          <div class="top"></div>
+          <div class="right"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <!-- MODULO BOCA ABAJO -->
+      <div id="modA">
+        <div class="top"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="bottom"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
